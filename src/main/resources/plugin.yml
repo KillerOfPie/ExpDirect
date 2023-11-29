@@ -1,0 +1,19 @@
+# noinspection YAMLSchemaValidation
+name: '${project.name}'
+version: '${project.version}'
+# noinspection YAMLSchemaValidation
+main: '${project.groupId}.${project.artifactId}'
+prefix: '${project.artifactId}'
+load: STARTUP
+depend: [BKCommonLib]
+authors: [Pastry Maker Studios]
+description: '${project.description}'
+website: '${project.url}'
+commands:
+  SCFWS:
+    description: 'Main command for SCFWS'
+    usage: '/scfws'
+    permission: 'scfws.admin'
+    aliases: [cloudflared, cloudflare, scfws, scf]
+    permission-message: 'You do not have permission to use this command.'
+    message: 'Starting SCFWS...'
